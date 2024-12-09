@@ -1,0 +1,23 @@
+.home-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    color: blueviolet;
+    
+    .navbar img{
+        height: 70px;
+    }
+    .nav-link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-links ul{
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0 15px;
+      cursor: pointer;
+      font-size: 22px;
+    }
+}
