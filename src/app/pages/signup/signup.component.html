@@ -1,18 +1,18 @@
 <div class="container">
     <h1> Sign up</h1>
-    <form signupForm>
+    <form [formGroup]="contactSignupForm" (ngSubmit)="submitForm()">
      <div class="input-container">
         <label for="name">Name</label>
-        <input type="text" placeholder="Your Name">
+        <input type="text" formControlName="name" placeholder="Your Name">
     
         <label for="email">Email</label>
-        <input type="text" placeholder="Your Email">
+        <input type="text" formControlName="email" placeholder="Your Email">
         
         <label for ="password">Password</label>
-        <input type="password" placeholder="password">
+        <input type="password" formControlName="password" placeholder="placeholder">
 
-        <label for="repeatpassword">ReapeatPassword</label>
-        <input type="password" placeholder="Repeat Password">
+        <label for="repeatpassword">Reapeat Password</label>
+        <input type="password" formControlName="repeatpassword" placeholder="Repeat Password">
        
     </div>
      <button type="submit">SIGN UP</button>

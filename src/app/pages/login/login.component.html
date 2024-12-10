@@ -1,12 +1,12 @@
 <div class="container">
-    <h1>LOGIN</h1>
-    <form loginForm>
+    <h1>Log in</h1>
+    <form loginForm [formGroup]="contactLogInForm" (ngSubmit)="submitForm()">
      <div class="input-container">
         <label for="username">Username</label>
-        <input type="text" placeholder="Username">
+        <input type="text" formControlName="username" placeholder="Username">
     
         <label for="password">Password</label>
-        <input type="text" placeholder="password">
+        <input type="text" formControlNam="password" placeholder="password">
             <div class="radio-group">
           <label for="Rememberme">Remember me</label>
         <input type="radio" id="Rememberme">
