@@ -12,11 +12,12 @@ export class Login implements OnInit {
     username: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required)
   })
-ngOnInit(): void {
-  
-}
-public submitForm(): void{
-  console.log( this.contactLogInForm.value)
-}
 
+  ngOnInit(): void {
+    
+  }
+
+  public submitForm(): void{
+    console.log( this.contactLogInForm.value)
+  }
 }
