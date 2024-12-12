@@ -9,13 +9,14 @@ import { FormGroup, FormsModule, FormControl, Validators, ReactiveFormsModule } 
 })
 export class Login implements OnInit {
   public contactLogInForm = new FormGroup({
-    username: new FormControl(''),
-    password: new FormControl('')
+    username: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required)
   })
 ngOnInit(): void {
   
 }
 public submitForm(): void{
-  console.log( )
+  console.log( this.contactLogInForm.value)
 }
+
 }
