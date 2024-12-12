@@ -1,9 +1,8 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { Init } from 'v8';
 import { Navbar } from '../../components/navbar/navbar.component';
 
-@Component({
+@Component ({
   selector: 'dc-home',
   imports: [
     RouterLink,

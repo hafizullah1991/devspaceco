@@ -1,20 +1,19 @@
 <div class="container">
-    <h1>Log in</h1>
-    <form loginForm [formGroup]="contactLogInForm" (ngSubmit)="submitForm()">
-     <div class="input-container">
-        <label for="username">Username</label>
-        <input type="text" formControlName="username" placeholder="Username">
-    
-        <label for="password">Password</label>
-        <input type="password" formControlNam="password" placeholder="password">
-            <div class="radio-group">
-          <label for="Rememberme">Remember me</label>
-        <input type="radio" id="Rememberme">
-        <a href="#" class="forgot">Forgot?</a>
-            </div>
-       
-    </div>
-     <button type="submit">LOG IN</button>
-    </form>
-</div>
+  <h1>Log in</h1>
+  <form loginForm [formGroup]="contactLogInForm" (ngSubmit)="submitForm()">
+    <div class="input-container">
+      <label for="username">Username</label>
+      <input type="text" id="username" formControlName="username" placeholder="Username" />
 
+      <label for="password">Password</label>
+      <input type="password" id="password" formControlName="password" placeholder="Password" />
+
+      <div class="radio-group">
+        <label for="rememberMe">Remember me</label>
+        <input type="radio" id="rememberMe" />
+        <a href="#" class="forgot">Forgot?</a>
+      </div>
+    </div>
+    <button type="submit">LOG IN</button>
+  </form>
+</div>
