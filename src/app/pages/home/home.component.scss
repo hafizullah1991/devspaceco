@@ -1,11 +1,78 @@
-.container-home {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: space-around;
- img{
-  width: 100%;
-  height: 60%;
+.home-container{
+width: 100Vw;
+height: 100vh;
+margin: 0 auto;
+border: 2px solid orange;
+align-items: center;
+text-align: center;
+position: absolute;
+font-family: 'Roboto', sans-serif;
 }
+.hero{
+  width: 88%;
+  height: auto;
+  margin: 55px auto;
+  
 
 }
+.hero h1{
+  font-size: 33px;
+  font-weight: bold;
+  padding: 8px;
+}
+.hero p{
+  font-size: 20px;
+  line-height: 29px;
+}
+.hero ul li{
+  list-style: none;
+  text-align: start;
+  margin-left: 170px;
+  padding: 6px;
+  font-size: 19px;
+}
+button{
+ padding: 20px;
+ margin: 8px;
+ font-size: 19px;
+ font-weight: bold;
+ border-radius: 10px;
+ outline: none;
+ cursor: pointer;
+
+}
+.btn-started{
+  background-color: #32CD32;
+  color: wheat;
+}
+.btn-started:hover{
+  color: black;
+}
+.btn-explore{
+  background-color: blueviolet;
+  color: beige;
+}
+.btn-explore:hover{
+  background-color:olivedrab ;
+  color: whitea;
+}
+.backgroundImage img{
+  width: 500px;
+  position: absolute;
+  top: 100px;
+  right: 110px;
+  opacity: 0.3;
+
+}
+
+// .overlay {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: rgba(0, 0, 0, 0.5);
+//   z-index: 1;
+// }
+
+

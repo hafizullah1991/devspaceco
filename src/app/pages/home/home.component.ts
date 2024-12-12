@@ -9,5 +9,5 @@ import { Navbar } from "../../components/navbar/navbar.component";
 })
 
 export class Home {
-
+  
 }
