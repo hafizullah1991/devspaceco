@@ -1,18 +1,20 @@
+@import '../../../variables.scss';
 .container {
   width: 100%;
-  max-width: 400px;
-  height: 500px;
+  max-width: 440px;
+  height: 600px;
   margin: 100px auto;
   padding: 40px 50px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
   background-color: #f9f9f9;
+  font-family: 'Montserrat'sans-serif;
 
   h1 {
      margin: 20px;
-     font-size: 24px;
-     color: rgb(117, 86, 117);
+     font-size: 30px;
+     color:$secondary-color;
     }
 }
 
@@ -23,12 +25,12 @@
   text-align: left;
 
     label {
-      font-size: 18px;
-      font-size: bold;
-      color:  rgb(117, 86, 117);
+      font-size: 20px;
+      color: $secondary-color;
+     
     }
 
-  input {
+ input {
       width: 100%;
       padding: 10px;
       font-size: 14px;
@@ -37,6 +39,9 @@
       outline: none;
       transition: border 0.3s ease;
     }
+    input:focus{
+        border-color: $primary-color;
+    }
 }
 
 button[type="submit"]{
@@ -44,15 +49,13 @@ button[type="submit"]{
   padding: 12px;
   border-radius: 22px;
   border: none;
-  background-color:#007bff ;
-  color: wheat;
+  background-color:$primary-color;
+  color: white;
   font-size: 16px;
   font-weight: bold;
-  margin: 25px 0px;
+  margin: 34px 0px;
 
   &:hover {
-      color: #007bff;
-      background-color: white;
-      border: 2px solid;
+    filter: brightness(120%);
     }
 }

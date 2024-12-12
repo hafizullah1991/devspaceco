@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormsModule, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
+import { Logo } from "../../components/logo/logo.component";
 
 @Component ({
   selector: 'dc-signup',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule ],
+  imports: [FormsModule, ReactiveFormsModule, Logo],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.scss'
 })

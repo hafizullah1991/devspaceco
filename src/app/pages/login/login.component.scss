@@ -1,8 +1,9 @@
+@import '../../../variables.scss';
 .container {
   width: 100%;
   max-width: 400px;
-  height: 400px;
-  margin: 50px auto;
+  height: 500px;
+  margin: 100px auto;
   padding: 30px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -12,8 +13,9 @@
 
   h1 {
      margin: 20px 0;
-     font-size: 24px;
-     color: #333;
+     font-size: 30px;
+     padding: 10px;
+     color:$secondary-color;
   }
 } 
   
@@ -25,9 +27,9 @@
   text-align: left;
 
   label {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
-    color: #555;
+    color:$secondary-color;
   }
   
   input {
@@ -39,18 +41,18 @@
     transition: border 0.3s ease;
   }
 
-  input[type="text"]:focus {
-    border-color: #007bff;
+  input:focus {
+    border-color: $primary-color;
   }
 
-  input[type="radio"]{
+  input[type="radio"] {
     margin:0 12px;
   }
 }
 
 .forgot {
-  font-size: 16px;
-  color: #007bff;
+  font-size: 18px;
+  color: $primary-color;
   text-decoration: none;
   float: right;
 
@@ -66,15 +68,15 @@
     font-size: 16px;
     font-weight: bold;
     color: #fff;
-    background-color: #007bff;
+    background-color: $primary-color;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 40px;
     transition: background-color 0.3s ease;
     
-    &::hover {
-      background-color: #0056b3;
+    &:hover {
+      filter: brightness(120%);
     }
   }
   
