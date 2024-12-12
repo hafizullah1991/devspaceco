@@ -10,10 +10,10 @@ import { FormGroup, FormsModule, FormControl, Validators, ReactiveFormsModule } 
 })
 export class Signup implements OnInit{
 public contactSignupForm = new FormGroup({
-  name: new FormControl(''),
-  email: new FormControl(''),
-  password: new FormControl(''),
-  repeatpassword: new FormControl('')
+  name: new FormControl('', Validators.required),
+  email: new FormControl('', Validators.required),
+  password: new FormControl('', Validators.required),
+  repeatpassword: new FormControl('', Validators.required)
 });
 ngOnInit(): void {}
   public submitForm(): void{
