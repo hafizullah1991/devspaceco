@@ -1,2 +1,82 @@
-<p>You are loged in !</p>
+<dc-navbar></dc-navbar>
+<div class="dashboard-container">
+  <div class="welcome-section">
+    <h1>Welcome, {{ username }}!</h1>
+    <p>Your journey to meaningful connections starts here.</p>
+  </div>
+
+  <div class="stats-section">
+    <h2>Your Activity</h2>
+    <ul>
+      <li><strong>Posts Shared:</strong> {{ userPostsCount }}</li>
+      <li><strong>Comments Made:</strong> {{ userCommentsCount }}</li>
+      <li><strong>Likes Received:</strong> {{ userLikesReceived }}</li>
+    </ul>
+  </div>
+
+  <div class="featured-section">
+    <h2>Featured Ideas</h2>
+    <div class="featured-list" *ngFor="let idea of featuredIdeas">
+      <div class="idea-card">
+        <h3>{{ idea.title }}</h3>
+        <p>{{ idea.summary }}</p>
+        <button (click)="viewIdea(idea.id)">Read More</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="recent-section">
+    <h2>Recent Posts</h2>
+    <div class="recent-list" *ngFor="let post of recentPosts">
+      <div class="post-card">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.summary }}</p>
+        <button (click)="viewPost(post.id)">View Details</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-section">
+    <button class="btn-create" routerLink="/create">Share a New Idea</button>
+    <button class="btn-browse" routerLink="/browse">Explore Community Ideas</button>
+  </div>
+</div>
+
+<style>
+.dashboard-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.stats-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.featured-list, .recent-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.idea-card, .post-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  width: 30%;
+}
+
+.btn-create, .btn-browse {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+</style>
+
 
