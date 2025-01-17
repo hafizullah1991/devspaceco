@@ -1,5 +1,6 @@
-// @import '../../../variables.scss';
-@use '../../../variables.scss' as *;
+@use '../../../variables.scss' as variables;
+$breakpoints: variables.$breakpoints;
+@import 'include-media';
 
 .home-container {
   width: 100Vw;
@@ -25,7 +26,7 @@
     font-weight: bold;
     padding: 0;
     margin-top: 64px;
-    color: $secondary-color;
+    color: variables.$secondary-color;
   }
 
   p {
@@ -65,13 +66,17 @@ button {
 }
 
 .btn-explore {
-  background-color: $primary-color;
+  background-color: variables.$primary-color;
   color: beige;
   margin-left: 15px;
   border: none;
 
   &:hover {
     filter: brightness(120%);
+  }
+  //SCSS
+  @include media('<tablet') {
+    background-color: black !important;
   }
 }
 
@@ -84,4 +89,3 @@ button {
     opacity: 0.3;
   }
 }
-

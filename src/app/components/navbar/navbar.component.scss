@@ -1,3 +1,7 @@
+@use '../../../variables.scss' as variables;
+$breakpoints: variables.$breakpoints;
+@import 'include-media';
+
 .home-container {
   display: flex;
   justify-content: space-between;
@@ -5,34 +9,68 @@
   margin: 0 22px;
 }
 
-.nav-link {
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+
+  img {
+    width: 250px;
+
+    @include media('<tablet') {
+      width: 150px;
+    }
+
+    @include media('<phone') {
+      width: 100px;
+    }
+  }
+
+  @include media('<tablet') {
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-direction: column;
+  }
+}
+
+.nav-links {
   display: flex;
   justify-content: center;
   align-items: center;
     
-   ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-      margin: 0 15px;
-      cursor: pointer;
-      font-size: 22px;
-    }
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0 15px;
+    cursor: pointer;
+    font-size: 22px;
+  }
 
-    li {
-      background-color: #4567b7 ;
-      color: #ffffff;
-      width: 80px;
-      height: 35px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 5px 10px;
-      border-radius: 5px;
-      transition: .1s linear;
-    }
+  li {
+    background-color: #4567b7 ;
+    color: #ffffff;
+    width: 80px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: .1s linear;
+  }
 
-    & li:hover {
-      background-color: #2f4f7f;
-    }
-} 
+  & li:hover {
+    background-color: #2f4f7f;
+  }
+}
+
+// .hamburger {
+//   display: none;
+
+//   @include media('<tablet') {
+//     display: block
+//   }
+// }

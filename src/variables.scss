@@ -1,2 +1,7 @@
 $primary-color: blueviolet;
 $secondary-color: #2f4f7f;
+$breakpoints: (
+  'phone': 460px,
+  'tablet': 768px,
+  'desktop': 1024px
+);
